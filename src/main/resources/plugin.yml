@@ -1,0 +1,21 @@
+name: invsee
+version: '${project.version}'
+main: de.mipa.invsee.Invsee
+api-version: '1.21'
+folia-supported: true
+commands:
+  openinv:
+    description: Öffnet das Inventar eines Spielers.
+    usage: /openinv <Spieler>
+    permission: invsee.open
+  openec:
+    description: Öffnet die Enderchest eines Spielers.
+    usage: /openec <Spieler>
+    permission: invsee.ender
+permissions:
+  invsee.open:
+    description: Erlaubt das Öffnen von Inventaren.
+    default: true
+  invsee.ender:
+    description: Erlaubt das Öffnen von Enderchests.
+    default: true
