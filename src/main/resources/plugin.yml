@@ -1,6 +1,7 @@
 name: invsee
 version: '${project.version}'
 main: de.mipa.invsee.Invsee
+author: mipa
 api-version: '1.21'
 folia-supported: true
 commands:
