@@ -1,4 +1,4 @@
-name: invsee
+name: invsee-folia
 version: '${project.version}'
 main: de.mipa.invsee.Invsee
 author: mipa

@@ -1,5 +1,6 @@
 package de.mipa.invsee;
 
+import org.bstats.bukkit.Metrics;
 import org.bukkit.Bukkit;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
@@ -16,6 +17,9 @@ public class Invsee extends JavaPlugin {
         getLogger().info("InvSee Plugin aktiviert!");
         registerCommand("openinv");
         registerCommand("openec");
+        int pluginId = 24915; //
+        Metrics metrics = new Metrics(this, pluginId);
+
     }
 
     @Override
