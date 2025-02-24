@@ -16,7 +16,7 @@ commands:
 permissions:
   invsee.open:
     description: Erlaubt das Öffnen von Inventaren.
-    default: true
+    default: op
   invsee.ender:
     description: Erlaubt das Öffnen von Enderchests.
-    default: true
+    default: op
