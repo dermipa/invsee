@@ -6,7 +6,7 @@
 
     <groupId>de.mipa</groupId>
     <artifactId>invsee</artifactId>
-    <version>1.4</version>
+    <version>1.4.0</version>
     <packaging>jar</packaging>
 
     <name>invsee</name>
