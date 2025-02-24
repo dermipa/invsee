@@ -55,8 +55,22 @@ public class Invsee extends JavaPlugin {
                 player.sendMessage("§cDazu hast du keine Berechtigung!");
                 return true;
             }
-            player.openInventory(target.getInventory());
-            player.sendMessage("§aDu siehst nun das Inventar von " + target.getName());
+
+            // Erstelle ein neues Inventar mit der Größe für 36 Slots und 4 Rüstungsslots
+            Inventory inventory = Bukkit.createInventory(null, 45, "Inventar von " + target.getName()); // 45 Slots: 36 für Inventar, 9 für Rüstung
+
+            // Fülle das Inventar mit dem normalen Inventar des Zielspielers
+            inventory.setContents(target.getInventory().getContents());
+
+            // Füge die Rüstung des Zielspielers in die ersten 4 Slots (die Rüstungsslots) ein
+            inventory.setItem(36, target.getInventory().getItem(39)); // Stiefel
+            inventory.setItem(37, target.getInventory().getItem(38)); // Leggings
+            inventory.setItem(38, target.getInventory().getItem(37)); // Brustplatte
+            inventory.setItem(39, target.getInventory().getItem(36)); // Helm
+
+            // Öffne das benutzerdefinierte Inventar für den Spieler
+            player.openInventory(inventory);
+            player.sendMessage("§aDu siehst nun das Inventar und die Rüstung von " + target.getName());
             return true;
         }
 
